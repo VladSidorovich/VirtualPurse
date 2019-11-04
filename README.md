@@ -1,4 +1,4 @@
-# crmsystemvue
+# virtual-purse
 
 ## Project setup
 ```
