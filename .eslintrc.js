@@ -27,6 +27,10 @@ module.exports = {
   rules:{
     "linebreak-style": 0,
     "space-before-function-paren": 0,
-    "comma-dangle": 0
+    "comma-dangle": 0,
+    "no-console" : 0,
+    "semi" : 0,
+    "no-param-reassign": 0,
+    "no-undef": 0,
   }
 };
