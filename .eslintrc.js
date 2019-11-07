@@ -32,5 +32,7 @@ module.exports = {
     "semi" : 0,
     "no-param-reassign": 0,
     "no-undef": 0,
+    "no-return-await" : 0,
+    "dot-notation" : 0,
   }
 };
