@@ -37,5 +37,8 @@ module.exports = {
     "no-plusplus": 0,
     "no-unused-vars": 0,
     "no-empty": 0,
+    "no-nested-ternary": 0,
+    "no-return-assign": 0,
+    "arrow-body-style": 0
   }
 };
