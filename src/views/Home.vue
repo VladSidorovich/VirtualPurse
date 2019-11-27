@@ -28,6 +28,11 @@ import HomeBill from '../components/HomeBill.vue'
 import HomeCurrency from '../components/HomeCurrency.vue'
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$title('ProfileTitle')
+    }
+  },
   name: 'home',
   async mounted() {
     this.currency = await this.$store.dispatch('fetchCurrency')
@@ -46,6 +51,9 @@ export default {
       this.currency = await this.$store.dispatch('fetchCurrency')
       this.loading = false
     }
+  },
+  computed: {
+
   }
 };
 </script>

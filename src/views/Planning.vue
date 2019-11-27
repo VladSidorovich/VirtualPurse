@@ -63,7 +63,6 @@ export default {
         : percent < 100
           ? 'yellow'
           : 'red'
-      console.log(progressColor)
       const tooltipValue = cat.limit - spend
       const tooltip = `${tooltipValue < 0 ? 'Превышение на' : 'Осталось'} ${Math.abs(tooltipValue)}`
       return {

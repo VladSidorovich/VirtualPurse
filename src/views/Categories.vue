@@ -25,6 +25,11 @@ import CategoryCreate from '../components/CategoryCreate.vue'
 import CategoryEdit from '../components/CategoryEdit.vue'
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$title('ProfileTitle')
+    }
+  },
   name: 'categories',
   data: () => ({
     categories: [],
