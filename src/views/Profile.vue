@@ -1,22 +1,22 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>{{ 'ProfileTitle' | localize }}</h3>
+      <h3>{{'ProfileTitle' | localize}}</h3>
     </div>
 
     <form class="form" @submit.prevent="submitHandler">
       <div class="input-field">
         <input
-            id="description"
-            type="text"
-            v-model="name"
-            :class="{invalid: $v.name.$dirty && !$v.name.required}"
+          id="description"
+          type="text"
+          v-model="name"
+          :class="{invalid: $v.name.$dirty && !$v.name.required}"
         >
-        <label for="description">{{ 'Name' | localize }}</label>
+        <label for="description">{{'Name'|localize}}</label>
         <small
           class="helper-text invalid"
           v-if="$v.name.$dirty && !$v.name.required"
-        >{{ 'Message_EnterName' | localize }}</small>
+        >{{'Message_EnterName'|localize}}</small>
       </div>
 
       <div class="switch">
@@ -29,7 +29,7 @@
       </div>
 
       <button class="btn waves-effect waves-light" type="submit">
-        {{ 'Update' | localize}}
+        {{'Update'|localize}}
         <i class="material-icons right">send</i>
       </button>
     </form>

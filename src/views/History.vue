@@ -1,33 +1,32 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3>{{'History_Title'|localize}}</h3>
     </div>
 
     <div class="history-chart">
       <canvas ref="canvas"></canvas>
     </div>
 
-    <Loader v-if="loading" />
+    <Loader v-if="loading"/>
 
-    <p class="center" v-else-if="!records.length">Записей пока нет.
-      <router-link to="/record"> Добавьте первую запись.</router-link>
+    <p class="center" v-else-if="!records.length">
+      {{'NoRecords'|localize}}.
+      <router-link to="/record">{{'AddFirst'|localize}}</router-link>
     </p>
 
     <section v-else>
-
       <HistoryTable :records="items"/>
 
       <Paginate
         v-model="page"
         :page-count="pageCount"
         :click-handler="pageChangeHandler"
-        :prev-text="'Назад'"
-        :next-text="'Вперед'"
+        :prev-text="'Back' | localize"
+        :next-text="'Forward' | localize"
         :container-class="'pagination'"
         :page-class="'waves-effect'"
       />
-
     </section>
   </div>
 </template>
